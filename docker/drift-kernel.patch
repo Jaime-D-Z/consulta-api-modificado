@@ -1,5 +1,5 @@
 diff --git a/src/Kernel.php b/src/Kernel.php
-index 245b768..6d8b236 100644
+index e4399ea..6d8b236 100644
 --- a/src/Kernel.php
 +++ b/src/Kernel.php
 @@ -5,8 +5,6 @@ namespace App;
@@ -19,7 +19,7 @@ index 245b768..6d8b236 100644
          } elseif (is_file($path = \dirname(__DIR__).'/config/services.php')) {
              (require $path)($container->withPath($path), $this);
          }
-@@ -38,21 +35,4 @@ class Kernel extends BaseKernel
+@@ -38,30 +35,4 @@ class Kernel extends BaseKernel
              (require $path)($routes->withPath($path), $this);
          }
      }
@@ -33,10 +33,19 @@ index 245b768..6d8b236 100644
 -        $loop = $this->getContainer()->get('reactphp.event_loop');
 -        $promise = $this->handleAsync($request);
 -        $response = null;
--        $promise->then(function ($result) use (&$response) {
--            $response = $result;
--        });
+-        $promise->then(
+-            function ($result) use (&$response) {
+-                $response = $result;
+-            },
+-            function (\Throwable $error) use (&$response) {
+-                $response = $error;
+-            }
+-        );
 -        $loop->run();
+-
+-        if ($response instanceof \Throwable) {
+-            throw $response;
+-        }
 -
 -        return $response;
 -    }
