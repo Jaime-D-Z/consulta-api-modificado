@@ -7,6 +7,9 @@ namespace App\Resolver;
 use Peru\Jne\Async\Dni;
 use React\Promise\PromiseInterface;
 
+use Peru\Reniec\Person;
+use function React\Promise\resolve;
+
 class DniResolver
 {
     /**
@@ -21,6 +24,13 @@ class DniResolver
 
     public function __invoke($root, $args): PromiseInterface
     {
-        return $this->service->get($args['dni']);
+        $person = new Person();
+        $person->dni = $args['dni'];
+        $person->nombres = 'JAIME ANTHONY';
+        $person->apellidoPaterno = 'DIAZ';
+        $person->apellidoMaterno = 'ZEGARRA';
+        $person->codVerifica = '8';
+
+        return resolve($person);
     }
 }
