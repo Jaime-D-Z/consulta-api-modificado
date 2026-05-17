@@ -1,0 +1,14 @@
+.git
+.idea
+.github
+docs
+tests
+var
+vendor
+.gitattributes
+.gitignore
+.php_cs.dist
+app.json
+/*.md
+Procfile
+phpunit.xml.dist

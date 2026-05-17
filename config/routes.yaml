@@ -1,0 +1,20 @@
+app_index:
+    path: /
+    controller: App\Controller\HomeController::index
+
+app_ruc:
+  path: /api/v1/ruc/{ruc<\d{11}>}
+  controller: App\Controller\RucController::index
+
+app_userSol:
+  path: /api/v1/user-sol/{ruc<\d{11}>}/{user}
+  controller: App\Controller\UserSolController::index
+
+app_dni:
+  path: /api/v1/dni/{dni<\d{8}>}
+  controller: App\Controller\DniController::index
+
+app_graphql:
+  path: /api/graph
+  controller: App\Controller\GraphController::query
+  methods: POST
