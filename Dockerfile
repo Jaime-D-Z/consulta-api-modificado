@@ -16,10 +16,7 @@ COPY . .
 
 RUN git apply docker/drift-kernel.patch
 RUN git apply docker/drift-adapter.patch
-RUN composer install --no-interaction --no-dev --optimize-autoloader --ignore-platform-reqs && \
-    composer require drift/server:0.1.25 --ignore-platform-reqs && \
-    composer require react/filesystem:^0.1.2 --ignore-platform-reqs && \
-    composer dump-autoload --optimize --no-dev --classmap-authoritative && \
+RUN composer install --no-interaction --no-dev --optimize-autoloader --classmap-authoritative --ignore-platform-reqs && \
     composer dump-env prod --empty && \
     find . -name "[Tt]est*" -type d -exec rm -rf {} + && \
     find . -type f -name '*.md' -delete;
