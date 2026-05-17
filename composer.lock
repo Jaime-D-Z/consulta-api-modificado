@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92beead0134ccddfe1bca034dd140cf1",
+    "content-hash": "6a9f1881b15ea72fc63c14ed3ab0b6de",
     "packages": [
         {
             "name": "clue/block-react",
@@ -77,23 +77,23 @@
         },
         {
             "name": "drift/http-kernel",
-            "version": "0.1.20",
+            "version": "0.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/driftphp/http-kernel.git",
-                "reference": "a7526e58d623aed244d006baccc83037b5305d3e"
+                "reference": "6706b4734c21c177049b4fbd6bf872d6fcfd56bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/driftphp/http-kernel/zipball/a7526e58d623aed244d006baccc83037b5305d3e",
-                "reference": "a7526e58d623aed244d006baccc83037b5305d3e",
+                "url": "https://api.github.com/repos/driftphp/http-kernel/zipball/6706b4734c21c177049b4fbd6bf872d6fcfd56bc",
+                "reference": "6706b4734c21c177049b4fbd6bf872d6fcfd56bc",
                 "shasum": ""
             },
             "require": {
                 "clue/block-react": "^1.3",
                 "php": "^7.4 || ^8.0",
                 "react/http": "^1.0",
-                "react/promise": "^3",
+                "react/promise": "^2.7",
                 "symfony/dependency-injection": "^5.0",
                 "symfony/event-dispatcher-contracts": "^2.0",
                 "symfony/filesystem": "^5.0",
@@ -107,6 +107,9 @@
                 "phpunit/phpunit": "^9",
                 "symfony/console": "^5.0",
                 "symfony/yaml": "^5.0"
+            },
+            "suggest": {
+                "react/filesystem": "*"
             },
             "type": "library",
             "autoload": {
@@ -130,9 +133,9 @@
             "description": "Http Kernel component for Drift, based on Symfony Http Kernel component",
             "support": {
                 "issues": "https://github.com/driftphp/http-kernel/issues",
-                "source": "https://github.com/driftphp/http-kernel/tree/0.1.20"
+                "source": "https://github.com/driftphp/http-kernel/tree/0.1.19"
             },
-            "time": "2023-08-28T11:56:40+00:00"
+            "time": "2022-09-07T09:08:35+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -864,24 +867,23 @@
         },
         {
             "name": "react/promise",
-            "version": "v3.3.0",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a"
+                "reference": "1a8460931ea36dc5c76838fec5734d55c88c6831"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/23444f53a813a3296c1368bb104793ce8d88f04a",
-                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/1a8460931ea36dc5c76838fec5734d55c88c6831",
+                "reference": "1a8460931ea36dc5c76838fec5734d55c88c6831",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "1.12.28 || 1.4.10",
-                "phpunit/phpunit": "^9.6 || ^7.5"
+                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
@@ -925,7 +927,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v3.3.0"
+                "source": "https://github.com/reactphp/promise/tree/v2.11.0"
             },
             "funding": [
                 {
@@ -933,7 +935,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2025-08-19T18:57:03+00:00"
+            "time": "2023-11-16T16:16:50+00:00"
         },
         {
             "name": "react/promise-timer",

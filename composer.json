@@ -10,7 +10,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*",
-        "drift/http-kernel": "^0.1.16",
+        "drift/http-kernel": "0.1.19",
         "giansalex/peru-consult": "^v4.5.0",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",

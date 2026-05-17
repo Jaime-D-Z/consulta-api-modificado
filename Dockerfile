@@ -21,8 +21,8 @@ RUN composer install --no-interaction --no-dev --optimize-autoloader --ignore-pl
     composer require react/filesystem:^0.1.2 --ignore-platform-reqs && \
     composer dump-autoload --optimize --no-dev --classmap-authoritative && \
     composer dump-env prod --empty && \
-    find -name "[Tt]est*" -type d -exec rm -rf {} + && \
-    find -type f -name '*.md' -delete;
+    find . -name "[Tt]est*" -type d -exec rm -rf {} + && \
+    find . -type f -name '*.md' -delete;
 
 FROM php:8.0-alpine3.13
 
